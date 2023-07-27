@@ -3,11 +3,11 @@ using namespace std;
 
 void Display()
 {
-    int iCnt = 0;
-    for(iCnt = 1; iCnt <=5; iCnt++)
-    {
-        cout<<"Hello world : "<<iCnt<<"\n";
-    }
+    cout<<"1\n";
+    cout<<"2\n";
+    cout<<"3\n";
+    cout<<"4\n";
+    cout<<"5\n";
 }
 
 int main()

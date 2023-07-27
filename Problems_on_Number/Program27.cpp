@@ -4,28 +4,24 @@ using namespace std;
 class Arithmetic
 {
     public:
-        int iNo1;
-        int iNo2;
-        int iNo3;
-        int iNo4;
-        int iNo5;
+
         int iSum;
 
         Arithmetic()
         {
-            iNo1 = 1;
-            iNo2 = 2;
-            iNo3 = 3;
-            iNo4 = 4;
-            iNo5 = 5;
             iSum = 0;
         }
 
         int Summation()
         {
 
-            iSum = iNo1 + iNo2 + iNo3 + iNo4 + iNo5;
-        
+
+            iSum = iSum + 1;
+            iSum = iSum + 2;
+            iSum = iSum + 3;
+            iSum = iSum + 4;
+            iSum = iSum + 5;
+ 
             return iSum;
         }
 };

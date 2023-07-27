@@ -4,38 +4,36 @@ using namespace std;
 class Arithmetic
 {
     public:
-        int iNo1;
-        int iNo2;
-        int iNo3;
-        int iNo4;
-        int iNo5;
+
         int iSum;
 
         Arithmetic()
         {
-            iNo1 = 1;
-            iNo2 = 2;
-            iNo3 = 3;
-            iNo4 = 4;
-            iNo5 = 5;
             iSum = 0;
         }
 
-        int Summation()
+        int Summation(int iValue)
         {
-
-            iSum = iNo1 + iNo2 + iNo3 + iNo4 + iNo5;
-        
+            int iCnt = 0;
+            for(iCnt=1; iCnt<=iValue; iCnt++)
+            {
+                iSum = iSum + iCnt;
+            }
+ 
             return iSum;
         }
 };
 
 int main()
 {
+    int iNo = 0;
     int iRet = 0;
 
+    cout<<"Please enter number : \n";
+    cin>>iNo;
+
     Arithmetic aobj;
-    iRet = aobj.Summation();
+    iRet = aobj.Summation(iNo);
     cout<<"Summation is : "<<iRet<<"\n";
 
     return 0;

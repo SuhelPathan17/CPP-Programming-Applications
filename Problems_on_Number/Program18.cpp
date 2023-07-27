@@ -4,9 +4,12 @@ using namespace std;
 void Display()
 {
     int iCnt = 0;
-    for(iCnt = 1; iCnt <=5; iCnt++)
+
+    iCnt = 1;       // 1
+    while(iCnt <= 5)    // 2
     {
-        cout<<"Hello world : "<<iCnt<<"\n";
+        cout<<"Jay Ganesh...\n";  // 4
+        iCnt++;     // 3
     }
 }
 

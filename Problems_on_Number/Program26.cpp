@@ -1,99 +1,46 @@
 #include<iostream>
 using namespace std;
 
-class ArrayX
+class Arithmetic
 {
     public:
-        int * Arr;
-        int iSize;
+        int iNo1;
+        int iNo2;
+        int iNo3;
+        int iNo4;
+        int iNo5;
+        int iSum;
 
-        ArrayX(int i)
+        Arithmetic()
         {
-            cout<<"Allocating the memory for resources..."<<"\n";            
-            iSize = i;
-            Arr = new int[iSize];   // Arr = (int *)malloc(iSize * sizeof(int));
+            iNo1 = 1;
+            iNo2 = 2;
+            iNo3 = 3;
+            iNo4 = 4;
+            iNo5 = 5;
+            iSum = 0;
         }
 
-        ~ArrayX()
+        int Summation()
         {
-            cout<<"Deallocating the memory of resources..."<<"\n";
-            
-            delete []Arr;   // free(Arr);
-        }
 
-        void Accept()
-        {
-            cout<<"Enter the elements of array : "<<"\n";
-
-            for(int iCnt = 0; iCnt < iSize; iCnt++)
-            {
-                cin>>Arr[iCnt];    // scanf("%d",&Arr[iCnt]);
-            }
-        }
-
-        void Display()
-        {
-            cout<<"Elements of array are : "<<"\n";
-
-            for(int iCnt = 0; iCnt < iSize; iCnt++)
-            {
-                cout<<Arr[iCnt]<<"\t";    // printf("%d",Arr[iCnt]);
-            }
-            cout<<"\n";
-        }
-
-        
-};
-
-class MarvellousLB : public ArrayX
-{
-    public:
-
-        MarvellousLB(int i) : ArrayX(i)
-        { }
-
-        int CheckLastOccurence(int iNo)
-        {
-            int iCnt = 0;
-            for(iCnt = iSize - 1; iCnt >= 0; iCnt --)
-            {
-                if(Arr[iCnt] == iNo)
-                {
-                    break;
-                }
-            }      
-            if(iCnt == -1)
-            {
-                return -1;
-            }
-            else
-            {
-                return iCnt;
-            }        
+            iSum = iSum + iNo1;
+            iSum = iSum + iNo2;
+            iSum = iSum + iNo3;
+            iSum = iSum + iNo4;
+            iSum = iSum + iNo5;
+ 
+            return iSum;
         }
 };
 
 int main()
 {
-    int iLength = 0;
     int iRet = 0;
-    int iValue = 0;
 
-    cout<<"Enter the size of array : "<<"\n";
-    cin>>iLength;
-    
-    cout<<"Enter the No. u want to find : "<<"\n";
-    cin>>iValue;
+    Arithmetic aobj;
+    iRet = aobj.Summation();
+    cout<<"Summation is : "<<iRet<<"\n";
 
-    MarvellousLB * ptr = new MarvellousLB(iLength);
-
-    ptr->Accept();
-    ptr->Display();
-
-    iRet = ptr->CheckLastOccurence(iValue);
-    cout<<"Last occurence of no. is at index :"<<iRet<<"\n";
-
-    delete ptr;
-    
     return 0;
 }
