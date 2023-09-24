@@ -55,7 +55,7 @@ int main()
     obj->Accept();
     obj->Display();
 
-    delete obj;
+    delete obj; //
     
     return 0;
 }
